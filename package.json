@@ -9,18 +9,6 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "builds": [
-    {
-      "src": "./server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "destination": "/"
-    }
-  ],
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "axios": "^1.4.0",
