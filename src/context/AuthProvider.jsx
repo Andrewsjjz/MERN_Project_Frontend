@@ -10,15 +10,17 @@ const AuthProvider = ({children}) => {
 
     const [auth, setAuth] = useState({})
     const [cargando, setCargando] = useState(true)
-
+    
     const navigate = useNavigate()
 
     useEffect(() => {
+        
         const autenticarUsuario = async () => {
             const token = localStorage.getItem('token')
             if(!token){
                 setCargando(false)
                 return
+                
             }
 
             const config = {
@@ -32,14 +34,11 @@ const AuthProvider = ({children}) => {
                 const { data } = await clienteAxios('/usuarios/perfil', config)
                 setAuth(data)
                 // navigate('/proyectos')
-
             } catch (error) {
                 setAuth({})
             } 
 
             setCargando(false)
-
-            
         }
         autenticarUsuario()
     }, [])
@@ -47,7 +46,6 @@ const AuthProvider = ({children}) => {
     const cerrarSesionAuth = () => {
         setAuth({})
     }
-
 
     return (
         <AuthContext.Provider
