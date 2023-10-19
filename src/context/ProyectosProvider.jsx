@@ -30,9 +30,7 @@ const ProyectosProvider = ({children}) => {
         const obtenerProyectos = async () => {
             try {
                 const token = localStorage.getItem('token')
-                if(!token) return
-                
-    
+                if(!token) return    
                 const config = {
                     headers: {
                         "Content-Type": "application/json",
@@ -54,7 +52,6 @@ const ProyectosProvider = ({children}) => {
 
     const mostrarAlerta = alerta => {
         setAlerta(alerta)
-
         setTimeout(() => {
             setAlerta({})
         }, 5000);
@@ -72,7 +69,6 @@ const ProyectosProvider = ({children}) => {
         try {
             const token = localStorage.getItem('token')
             if(!token) return
-
             const config = {
                 headers: {
                     "Content-Type": "application/json",
@@ -90,7 +86,6 @@ const ProyectosProvider = ({children}) => {
                 msg: 'Proyecto Actualizado Correctamente',
                 error: false
             })
-
             setTimeout(() => {
                 setAlerta({})
                 navigate('/proyectos')
@@ -104,7 +99,6 @@ const ProyectosProvider = ({children}) => {
         try {
             const token = localStorage.getItem('token')
             if(!token) return
-
             const config = {
                 headers: {
                     "Content-Type": "application/json",
