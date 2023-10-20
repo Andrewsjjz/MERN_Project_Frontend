@@ -17,13 +17,10 @@ export default function RutaProtegida() {
       (
         <div className="">
           <Header/>
-
           <div className="md:flex md:min-h-screen">
             <SideBar/>
-
             <main className="flex-1 p-10">
               <Outlet/>
-              
             </main>
           </div>
         </div>
