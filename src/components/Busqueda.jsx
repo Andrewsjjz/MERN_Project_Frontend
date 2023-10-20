@@ -26,6 +26,7 @@ const Busqueda = () => {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
+                    
                     <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-25 transition-opacity" />
                 </Transition.Child>
 
@@ -43,6 +44,7 @@ const Busqueda = () => {
                     className="mx-auto max-w-xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all"
                     onChange={ (proyecto) => (window.location = `/proyectos/${proyecto._id}`) }
                 >
+                    
                     <div className="relative">
                         <Combobox.Input
                             className="h-12 w-full border-0 bg-transparent pl-4 pr-4 text-gray-800 placeholder-gray-400 focus:ring-0 sm:text-sm"
