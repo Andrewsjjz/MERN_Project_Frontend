@@ -25,8 +25,6 @@ const Login = () => {
             return
         }
 
-
-
         try {
             const { data } = await clienteAxios.post('/usuarios/login', { email, password})
             setAlerta({})
@@ -70,6 +68,7 @@ const Login = () => {
                     onChange={ e => setEmail(e.target.value)}
                 />
             </div>
+            
             <div className="my-5">
                 <label 
                     className="uppercase text-gray-600 block text-xl font-bold"
